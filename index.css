@@ -10,6 +10,10 @@ body {
     background-color: #eee;
 }
 
+.body {
+    overflow-y: hidden;
+}
+
 #hamburger-menu {
     display: none;
 }
