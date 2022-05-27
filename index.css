@@ -10,6 +10,135 @@ body {
     background-color: #eee;
 }
 
+#hamburger-menu {
+    display: none;
+}
+
+.back {
+    display: none;
+}
+
+.navigation {
+    width: 40vw;
+    height: 100vh;
+    background-color: #262626;
+    padding-top: 80px;
+    position: fixed;
+    left: -50vw;
+    transition: all 0.3s;
+    z-index: 1;
+}
+
+.navigation li:first-child {
+    border-top: 1px solid #444;
+}
+
+.navigation li {
+    list-style: none;
+    border-bottom: 1px solid #444;
+    height: 8vh;
+    line-height: 8vh;
+}
+
+.navigation a {
+    text-decoration:none;
+    color: #fff;
+    width: 100%;
+    height: 100%;
+    display: block;
+    text-align: center;
+    font-size: clamp(20px, 3vw, 28px);
+}
+
+.navigation a:hover {
+    background-color: #333;
+}
+
+.back {
+    display: none;
+    cursor: auto;
+}
+
+.menu {
+    position: fixed;
+    left: 30px;
+    top: 20px;
+    z-index: 10;
+    transition: left 0.4s;
+}
+
+label {
+    width: 40px;
+    height: 40px;
+    user-select: none;
+    display: block;
+    position: relative;
+    cursor: pointer;
+    background-color: #444;
+}
+
+label div {
+    background-color: #eeeeee;
+    position: absolute;
+    width: 34px;
+    height: 2px;
+    transition: transform 0.4s;
+}
+
+label .bar1 {
+    top: 12px;
+    left: 3px;
+}
+
+label .bar2 {
+    top: 19px;
+    left: 3px;
+}
+
+label .bar3 {
+    bottom: 12px;
+    left: 3px;
+}
+
+i {
+    margin-right: 6px;
+}
+
+#hamburger-menu:checked ~ .menu {
+    left: 35vw;
+}
+
+#hamburger-menu:checked ~ .navigation {
+    left: 0;
+}
+
+#hamburger-menu:checked ~ .back {
+    display: block;
+    z-index: 0;
+    background-color: rgb(0, 0, 0, 0.6);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#hamburger-menu:checked ~ .menu .bar1, #hamburger-menu:checked ~ .menu .bar3 {
+    top: 19px;
+}
+
+#hamburger-menu:checked ~ .menu .bar1 {
+    transform: rotate(45deg);
+}
+
+#hamburger-menu:checked ~ .menu .bar2 {
+    display: none;
+}
+
+#hamburger-menu:checked ~ .menu .bar3 {
+    transform: rotate(-45deg);
+}
+
 .top {
     background-image: url('https://images.unsplash.com/photo-1437419764061-2473afe69fc2?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332');
     background-repeat: no-repeat;
@@ -22,6 +151,7 @@ body {
     animation-timeline: scroll-animation;
     animation-duration: 1s;
     animation-fill-mode: both;
+    z-index:-1;
 }
 
 .top h1 {
@@ -109,8 +239,7 @@ body {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 20px 0 0 clamp(40px, 5vw, 80px);
+    margin: 20px 0 30px clamp(40px, 5vw, 80px);
 }
 
 .results .card {
@@ -130,17 +259,22 @@ body {
 }
 
 .results .procon {
-    width: clamp(290px, 19vw, 480px);
+    width: clamp(576px, 38vw, 960px);
 }
 
 .results .card img {
     width: 100%;
-    height: clamp(360px, 24vw,600px);
+    height: clamp(360px, 24vw, 600px);
+    border-bottom: 1px solid #999;
 }
 
 .results .card .text {
     padding: 10px;
     text-align: center;
+}
+
+.results .text p  {
+    font-weight: bold;
 }
 
 .results .text a {
