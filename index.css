@@ -242,11 +242,12 @@ i {
     margin-left: 10vw;
 }
 
-.results .cards {
-    width: 100%;
+.results .cards_box {
+    height: auto;
     display: flex;
     flex-wrap: wrap;
-    margin: 20px 0 30px clamp(40px, 5vw, 80px);
+    margin: 20px 0 0 clamp(40px, 5vw, 80px);
+    justify-content: space-between;
 }
 
 .results .card {
@@ -265,13 +266,11 @@ i {
     display: inline-block;
 }
 
-.results .procon {
-    width: clamp(576px, 38vw, 960px);
-}
 
 .results .card img {
     width: 100%;
     height: clamp(360px, 24vw, 600px);
+    object-fit: cover;
     border-bottom: 1px solid #999;
 }
 
