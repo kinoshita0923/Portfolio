@@ -251,6 +251,7 @@ i {
     width: clamp(80px, 10vw, 110px);
     height: clamp(80px, 10vw, 110px);
     border-radius: 50%;
+    object-fit: cover;
 }
 
 .skills .contents .card li {
