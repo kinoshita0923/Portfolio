@@ -234,6 +234,23 @@ i {
     font-size: clamp(16px, 3vw, 32px);
 }
 
+.profile .content {
+    display: flex;
+}
+
+.profile .content .icon_image {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 30px;
+}
+
+.profile .content img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
 .skills .contents .card li {
     margin-left: 5vw;
 }
