@@ -23,7 +23,7 @@ body {
 }
 
 .navigation {
-    width: 40vw;
+    width: clamp(300px, 40vw, 400px);
     height: 100vh;
     background-color: #262626;
     padding-top: 80px;
@@ -115,7 +115,7 @@ i {
 }
 
 #hamburger-menu:checked ~ .menu {
-    left: 35vw;
+    left: clamp(260px, 35vw, 360px);
 }
 
 #hamburger-menu:checked ~ .navigation {
@@ -246,8 +246,8 @@ i {
 }
 
 .profile .content img {
-    width: 80px;
-    height: 80px;
+    width: clamp(80px, 10vw, 110px);
+    height: clamp(80px, 10vw, 110px);
     border-radius: 50%;
 }
 
