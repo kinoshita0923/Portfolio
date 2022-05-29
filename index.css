@@ -30,7 +30,7 @@ body {
     background-color: #262626;
     padding-top: 80px;
     position: fixed;
-    left: -50vw;
+    left: -100vw;
     transition: all 0.3s;
     z-index: 3;
 }
